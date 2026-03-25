@@ -1,0 +1,156 @@
+---
+title: "**PRÁTICA ESTATÍSTICA II**"
+subtitle: "**ATIVIDADE AVALIATIVA 2**"
+author: "Frederick (<fchame@id.uff.br>) <br> Breno (<brenoborges@id.uff.br>)"
+date: today
+date-format: "25/02/2026"
+institute: "Universidade Federal Fluminense"
+format:
+  revealjs:
+    css: custom.css
+    slide-number: true
+    incremental: false
+    transition: slide
+    background-transition: fade
+    width: 1280
+    height: 720
+    margin: 0.07
+    auto-stretch: false
+    title-slide-attributes:
+      data-background-image: "Capa.png"
+      data-background-size: cover
+---
+
+# **GTSUMMARY**{data-background-image="Capa.png" style="text-align:center"}
+
+## **TABELA**
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+require(openxlsx)            # Leitura de base de dados
+require(dplyr)               # Manipulação de base de dados
+require(gtsummary)           # Tabelas automáticas
+require(gt)                  # Tabelas automáticas
+require(rstatix)             # Coeficiente de Cramer
+require(broom)
+
+theme_gtsummary_language("pt", big.mark = ".", decimal.mark = ",") # formatação em português (vírgula pra decimais e ponto para milhares)
+
+Dados = read.xlsx("DadosAviao.xlsx")
+
+
+DadosQuali = Dados %>% select(Servico_Online, Genero, Cliente, Idade,
+                              Tipo_Viagem, Classe, Distancia,
+                              Atraso_Partida, Atraso_Chegada)
+
+```
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+
+```
+
+
+```{r} {.scrollable}
+# Função que calcula o coeficiente de Cramer
+cramer_fun <- function(data, variable, by, ...) {
+  tab <- table(data[[variable]], data[[by]])
+  v <- cramer_v(tab)
+  tibble::tibble(`**Cramér**` = round(v, 3))
+}
+
+# Código da tabela
+tbl_summary(data = DadosQuali,
+            by = Servico_Online,
+            percent = "row",
+            label = list(
+              Genero ~ "Gênero",
+              Cliente ~ "Tipo de Cliente",
+              Idade ~ "Idade",
+              Tipo_Viagem ~"Tipo de Viagem",
+              Classe ~ "Classe",
+              Distancia ~ "Distância",
+              Atraso_Partida ~"Atraso na Partida",
+              Atraso_Chegada ~"Atraso na Chegada"
+            )
+)%>%
+  add_p(pvalue_fun = label_style_pvalue(digits = 3)) %>%
+  bold_p(t = 0.05) %>%
+  add_stat(fns = everything() ~ cramer_fun)%>%
+  modify_spanning_header(all_stat_cols() ~ "**Satisfação com o Serviço Online**") %>%
+  modify_header(label ~ "**Variáveis**") %>%
+  bold_labels() %>%
+  modify_header(all_stat_cols() ~ "**{level}**<br>{n} ({style_percent(p)}%)")%>%
+  modify_bold(
+    columns = stat_1,  # primeira coluna
+    rows = (variable == "Cliente" & label == "Cliente Fiel"| label=="Cliente Nao Fiel") | 
+      (variable == "Classe" & label == "Economica" | label=="Executiva") |
+      (variable == "Idade" & label == "<30 anos" | label=="30-50 anos")
+  )%>%
+  modify_bold(
+    columns = stat_2, # segunda coluna
+    rows = (variable == "Classe" & label == "Economica" | label == "Executiva")
+  )%>%
+  modify_bold(
+    columns = stat_3,  # terceira coluna
+    rows = (variable == "Classe" & label == "Economica"| label=="Executiva") |
+    (variable == "Idade" & label == "<30 anos") |
+    (variable == "Cliente" & label == "Cliente Fiel" | label == "Cliente Nao Fiel"))%>%
+  modify_footnote(everything() ~ NA)%>%
+  as_gt() %>%                   
+  fmt_markdown(columns = label) %>%
+  tab_options(
+    table.font.size = "20px",    
+    heading.title.font.size = "26px",
+    column_labels.font.size = "22px"
+  )
+
+```
+
+
+## **RESULTADOS**
+
+::: box-blue
+Este é um bloco azul.
+:::
+
+| Produto | Preço | Quantidade |
+|:--------|------:|:----------:|
+| Lápis   |  1.50 |     10     |
+| Caderno | 12.00 |     5      |
+| Mochila | 75.00 |     1      |
+
+## *SCROLLING*
+
+Este slide demonstra o uso da classe **scrollable**, que permite adicionar **rolagem vertical** quando o conteúdo é muito grande.
+
+Este é um exemplo de texto genérico utilizado apenas para preencher o slide e demonstrar como o conteúdo pode ultrapassar a altura da tela.
+
+- Item 1
+- Item 2
+- Item 3
+- Item 4
+- Item 5
+
+Quando há muito conteúdo, o slide normalmente ficaria visualmente sobrecarregado. Com o uso de `scrollable`, é possível manter tudo em um único slide e permitir que o usuário role o conteúdo.
+
+- Item A
+- Item B
+- Item C
+- Item D
+- Item E
+
+## **CRIANDO UMA CHUNK**
+```{r}
+x <- 1:10
+hist(x)
+```
+
+## CHUNK COM NOME
+```{r boxplot}
+x <- 1:10
+boxplot(x)
+```
+
+## **CHUNK PERSONALIZADA**
+```{r, fig.width=10, fig.height=4}
+hist(rnorm(100), col="skyblue", main="Histograma")
+```
