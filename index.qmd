@@ -23,7 +23,7 @@ format:
 
 # **GTSUMMARY**{data-background-image="Capa.png" style="text-align:center"}
 
-## **TABELA**
+## **TABELA** {.scrollable}
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 require(openxlsx)            # Leitura de base de dados
@@ -38,18 +38,16 @@ theme_gtsummary_language("pt", big.mark = ".", decimal.mark = ",") # formataçã
 Dados = read.xlsx("DadosAviao.xlsx")
 
 
+```
+
+```{r,echo=FALSE}
 DadosQuali = Dados %>% select(Servico_Online, Genero, Cliente, Idade,
                               Tipo_Viagem, Classe, Distancia,
                               Atraso_Partida, Atraso_Chegada)
-
-```
-
-```{r, echo=FALSE, message=FALSE, warning=FALSE}
-
 ```
 
 
-```{r} {.scrollable}
+```{r}
 # Função que calcula o coeficiente de Cramer
 cramer_fun <- function(data, variable, by, ...) {
   tab <- table(data[[variable]], data[[by]])
@@ -112,8 +110,8 @@ tbl_summary(data = DadosQuali,
 Este é um bloco azul.
 :::
 
-| Produto | Preço | Quantidade |
-|:--------|------:|:----------:|
+| Variáveis | p-valor | Cramer |
+|:--------|:------:|:----------:|
 | Lápis   |  1.50 |     10     |
 | Caderno | 12.00 |     5      |
 | Mochila | 75.00 |     1      |
