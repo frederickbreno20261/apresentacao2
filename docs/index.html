@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <meta name="author" content="Frederick (fchame@id.uff.br)   Breno (brenoborges@id.uff.br)">
   <title>PRÁTICA ESTATÍSTICA II</title>
@@ -149,27 +149,264 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 <h1><strong>GTSUMMARY</strong></h1>
 
 </section>
+<section id="tabelas-de-frequências-esperadas" class="slide level2 scrollable">
+<h2><strong>Tabelas de frequências esperadas</strong></h2>
+<ul>
+<li>Gênero</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Feminino</td>
+<td style="text-align: center;">25</td>
+<td style="text-align: center;">22</td>
+<td style="text-align: center;">51</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Masculino</td>
+<td style="text-align: center;">24</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">49</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Cliente</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Cliente Fiel</td>
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">85</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Cliente Não Fiel</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">15</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Idade</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;30 anos</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">29</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">&gt;50 anos</td>
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">27</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">30-50 anos</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">44</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Tipo da viagem</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Viagem a negócios</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">29</td>
+<td style="text-align: center;">67</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Viagem pessoal</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">33</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Classe</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Econômica</td>
+<td style="text-align: center;">16</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">33</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Econômica Plus</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Executiva</td>
+<td style="text-align: center;">27</td>
+<td style="text-align: center;">23</td>
+<td style="text-align: center;">54</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Distância</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">&lt;500 km</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">18</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">500-1500 km</td>
+<td style="text-align: center;">21</td>
+<td style="text-align: center;">18</td>
+<td style="text-align: center;">42</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">&gt;1500 km</td>
+<td style="text-align: center;">19</td>
+<td style="text-align: center;">17</td>
+<td style="text-align: center;">39</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Partida</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Partida com atraso</td>
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">28</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Partida sem atraso</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">31</td>
+<td style="text-align: center;">72</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Chegada</li>
+</ul>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">Insatisfeito</th>
+<th style="text-align: center;">Neutro</th>
+<th style="text-align: center;">Satisfeito</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Chegada com atraso</td>
+<td style="text-align: center;">11</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">23</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Chegada sem atraso</td>
+<td style="text-align: center;">38</td>
+<td style="text-align: center;">33</td>
+<td style="text-align: center;">77</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="tabela" class="slide level2 scrollable">
 <h2><strong>TABELA</strong></h2>
 <div class="cell">
 <div class="cell-output-display">
-<div id="hswsopmxad" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hswsopmxad table {
+<div id="omzcbjnpdk" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#omzcbjnpdk table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hswsopmxad thead, #hswsopmxad tbody, #hswsopmxad tfoot, #hswsopmxad tr, #hswsopmxad td, #hswsopmxad th {
+#omzcbjnpdk thead, #omzcbjnpdk tbody, #omzcbjnpdk tfoot, #omzcbjnpdk tr, #omzcbjnpdk td, #omzcbjnpdk th {
   border-style: none;
 }
 
-#hswsopmxad p {
+#omzcbjnpdk p {
   margin: 0;
   padding: 0;
 }
 
-#hswsopmxad .gt_table {
+#omzcbjnpdk .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -195,12 +432,12 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-left-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_caption {
+#omzcbjnpdk .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hswsopmxad .gt_title {
+#omzcbjnpdk .gt_title {
   color: #333333;
   font-size: 26px;
   font-weight: initial;
@@ -212,7 +449,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-bottom-width: 0;
 }
 
-#hswsopmxad .gt_subtitle {
+#omzcbjnpdk .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -224,7 +461,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-top-width: 0;
 }
 
-#hswsopmxad .gt_heading {
+#omzcbjnpdk .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -236,13 +473,13 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-right-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_bottom_border {
+#omzcbjnpdk .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_col_headings {
+#omzcbjnpdk .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -257,7 +494,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-right-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_col_heading {
+#omzcbjnpdk .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 22px;
@@ -277,7 +514,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   overflow-x: hidden;
 }
 
-#hswsopmxad .gt_column_spanner_outer {
+#omzcbjnpdk .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 22px;
@@ -289,15 +526,15 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   padding-right: 4px;
 }
 
-#hswsopmxad .gt_column_spanner_outer:first-child {
+#omzcbjnpdk .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hswsopmxad .gt_column_spanner_outer:last-child {
+#omzcbjnpdk .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hswsopmxad .gt_column_spanner {
+#omzcbjnpdk .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -309,11 +546,11 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   width: 100%;
 }
 
-#hswsopmxad .gt_spanner_row {
+#omzcbjnpdk .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hswsopmxad .gt_group_heading {
+#omzcbjnpdk .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -339,7 +576,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   text-align: left;
 }
 
-#hswsopmxad .gt_empty_group_heading {
+#omzcbjnpdk .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -354,15 +591,15 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   vertical-align: middle;
 }
 
-#hswsopmxad .gt_from_md > :first-child {
+#omzcbjnpdk .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hswsopmxad .gt_from_md > :last-child {
+#omzcbjnpdk .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hswsopmxad .gt_row {
+#omzcbjnpdk .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -381,7 +618,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   overflow-x: hidden;
 }
 
-#hswsopmxad .gt_stub {
+#omzcbjnpdk .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -394,7 +631,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   padding-right: 5px;
 }
 
-#hswsopmxad .gt_stub_row_group {
+#omzcbjnpdk .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -408,15 +645,15 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   vertical-align: top;
 }
 
-#hswsopmxad .gt_row_group_first td {
+#omzcbjnpdk .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hswsopmxad .gt_row_group_first th {
+#omzcbjnpdk .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hswsopmxad .gt_summary_row {
+#omzcbjnpdk .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -426,16 +663,16 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   padding-right: 5px;
 }
 
-#hswsopmxad .gt_first_summary_row {
+#omzcbjnpdk .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_first_summary_row.thick {
+#omzcbjnpdk .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hswsopmxad .gt_last_summary_row {
+#omzcbjnpdk .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -445,7 +682,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-bottom-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_grand_summary_row {
+#omzcbjnpdk .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -455,7 +692,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   padding-right: 5px;
 }
 
-#hswsopmxad .gt_first_grand_summary_row {
+#omzcbjnpdk .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -465,7 +702,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-top-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_last_grand_summary_row_top {
+#omzcbjnpdk .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -475,11 +712,11 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-bottom-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_striped {
+#omzcbjnpdk .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hswsopmxad .gt_table_body {
+#omzcbjnpdk .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -488,7 +725,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-bottom-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_footnotes {
+#omzcbjnpdk .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -502,7 +739,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-right-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_footnote {
+#omzcbjnpdk .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -511,7 +748,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   padding-right: 5px;
 }
 
-#hswsopmxad .gt_sourcenotes {
+#omzcbjnpdk .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -525,7 +762,7 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   border-right-color: #D3D3D3;
 }
 
-#hswsopmxad .gt_sourcenote {
+#omzcbjnpdk .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -533,72 +770,72 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
   padding-right: 5px;
 }
 
-#hswsopmxad .gt_left {
+#omzcbjnpdk .gt_left {
   text-align: left;
 }
 
-#hswsopmxad .gt_center {
+#omzcbjnpdk .gt_center {
   text-align: center;
 }
 
-#hswsopmxad .gt_right {
+#omzcbjnpdk .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hswsopmxad .gt_font_normal {
+#omzcbjnpdk .gt_font_normal {
   font-weight: normal;
 }
 
-#hswsopmxad .gt_font_bold {
+#omzcbjnpdk .gt_font_bold {
   font-weight: bold;
 }
 
-#hswsopmxad .gt_font_italic {
+#omzcbjnpdk .gt_font_italic {
   font-style: italic;
 }
 
-#hswsopmxad .gt_super {
+#omzcbjnpdk .gt_super {
   font-size: 65%;
 }
 
-#hswsopmxad .gt_footnote_marks {
+#omzcbjnpdk .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hswsopmxad .gt_asterisk {
+#omzcbjnpdk .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hswsopmxad .gt_indent_1 {
+#omzcbjnpdk .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hswsopmxad .gt_indent_2 {
+#omzcbjnpdk .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hswsopmxad .gt_indent_3 {
+#omzcbjnpdk .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hswsopmxad .gt_indent_4 {
+#omzcbjnpdk .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hswsopmxad .gt_indent_5 {
+#omzcbjnpdk .gt_indent_5 {
   text-indent: 25px;
 }
 
-#hswsopmxad .katex-display {
+#omzcbjnpdk .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#hswsopmxad div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#omzcbjnpdk div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -636,7 +873,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value">0,549</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,078</td>
 </tr>
 <tr class="even">
@@ -667,7 +905,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">0,004</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,238</td>
 </tr>
 <tr class="odd">
@@ -698,7 +937,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,226</td>
 </tr>
 <tr class="even">
@@ -743,7 +983,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value">0,131</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,144</td>
 </tr>
 <tr class="even">
@@ -774,7 +1015,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value" style="font-weight: bold">&lt;0,001</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,271</td>
 </tr>
 <tr class="odd">
@@ -815,7 +1057,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value">0,500</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,093</td>
 </tr>
 <tr class="odd">
@@ -860,7 +1103,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value">0,350</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,104</td>
 </tr>
 <tr class="odd">
@@ -891,7 +1135,8 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 </td>
 <td class="gt_row gt_center" headers="stat_3"><br>
 </td>
-<td class="gt_row gt_center" headers="p.value">0,612</td>
+<td class="gt_row gt_center" headers="p.value"><br>
+</td>
 <td class="gt_row gt_center" headers="**Cramér**">0,071</td>
 </tr>
 <tr class="even">
@@ -925,6 +1170,88 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
 <h2><strong>RESULTADOS</strong></h2>
 <div class="box-blue">
 <p>Este é um bloco azul.</p>
+</div>
+<table class="caption-top">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Variáveis</th>
+<th style="text-align: center;">p-valor</th>
+<th style="text-align: center;">Cramer</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Lápis</td>
+<td style="text-align: center;">1.50</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Caderno</td>
+<td style="text-align: center;">12.00</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mochila</td>
+<td style="text-align: center;">75.00</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scrolling" class="slide level2">
+<h2><em>SCROLLING</em></h2>
+<p>Este slide demonstra o uso da classe <strong>scrollable</strong>, que permite adicionar <strong>rolagem vertical</strong> quando o conteúdo é muito grande.</p>
+<p>Este é um exemplo de texto genérico utilizado apenas para preencher o slide e demonstrar como o conteúdo pode ultrapassar a altura da tela.</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+<li>Item 4</li>
+<li>Item 5</li>
+</ul>
+<p>Quando há muito conteúdo, o slide normalmente ficaria visualmente sobrecarregado. Com o uso de <code>scrollable</code>, é possível manter tudo em um único slide e permitir que o usuário role o conteúdo.</p>
+<ul>
+<li>Item A</li>
+<li>Item B</li>
+<li>Item C</li>
+<li>Item D</li>
+<li>Item E</li>
+</ul>
+</section>
+<section id="criando-uma-chunk" class="slide level2">
+<h2><strong>CRIANDO UMA CHUNK</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chunk-com-nome" class="slide level2">
+<h2>CHUNK COM NOME</h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/boxplot-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="chunk-personalizada" class="slide level2">
+<h2><strong>CHUNK PERSONALIZADA</strong></h2>
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="index_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
+</div>
 </div>
 
 </section></section>
@@ -1144,42 +1471,80 @@ Frederick (<a href="mailto:fchame@id.uff.br" class="email">fchame@id.uff.br</a>)
       });
     </script>
     
+
     <script>
+
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+
       // slide changes (different for each slide format).
+
       (function () {
+
         // dispatch for htmlwidgets
+
         function fireSlideEnter() {
+
           const event = window.document.createEvent("Event");
+
           event.initEvent("slideenter", true, true);
+
           window.document.dispatchEvent(event);
+
         }
+
+    
 
         function fireSlideChanged(previousSlide, currentSlide) {
+
           fireSlideEnter();
 
+    
+
           // dispatch for shiny
+
           if (window.jQuery) {
+
             if (previousSlide) {
+
               window.jQuery(previousSlide).trigger("hidden");
+
             }
+
             if (currentSlide) {
+
               window.jQuery(currentSlide).trigger("shown");
+
             }
+
           }
+
         }
+
+    
 
         // hookup for slidy
+
         if (window.w3c_slidy) {
+
           window.w3c_slidy.add_observer(function (slide_num) {
+
             // slide_num starts at position 1
+
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+
           });
+
         }
 
+    
+
       })();
+
     </script>
+
+    
 
     <script id="quarto-html-after-body" type="application/javascript">
       window.document.addEventListener("DOMContentLoaded", function (event) {
