@@ -23,6 +23,70 @@ format:
 
 # **GTSUMMARY**{data-background-image="Capa.png" style="text-align:center"}
 
+## **Tabelas de frequências esperadas** {.scrollable} 
+
+- Gênero
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Feminino   |  25 |     22     |   51    |
+| Masculino | 24 |     21      |    49    |
+
+- Cliente
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Cliente Fiel   |  42 |     37     |   85    |
+| Cliente Não Fiel | 7 |     6      |    15    |
+
+- Idade
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| <30 anos   |  14 |     12     |   29    |
+| >50 anos | 13 |     12      |    27    |
+| 30-50 anos | 21 |     19      |    44    |
+
+- Tipo da viagem
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Viagem a negócios   |  33 |     29     |   67    |
+| Viagem pessoal | 16 |     14      |    33    |
+
+- Classe
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Econômica   |  16 |     14     |   33    |
+| Econômica Plus | 6 |     5      |    12    |
+| Executiva | 27 |     23      |    54    |
+
+- Distância
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| <500 km   |  8 |     7     |   18    |
+| 500-1500 km | 21 |     18      |    42    |
+| >1500 km | 19 |     17      |    39    |
+
+- Partida
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Partida com atraso   |  14 |     12     |   28    |
+| Partida sem atraso | 35 |     31      |    72    |
+
+- Chegada 
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Chegada com atraso   |  11 |     10     |   23    |
+| Chegada sem atraso | 38 |     33      |    77    |
+
+
+
+
 ## **TABELA** {.scrollable}
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
