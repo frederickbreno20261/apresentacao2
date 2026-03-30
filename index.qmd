@@ -21,9 +21,120 @@ format:
       data-background-size: cover
 ---
 
+# **METODOLOGIA**
+
+## *HIPÓTESE*
+Estamos interessados em avaliar se duas variáveis categóricas são independentes ou se existe associação entre elas. Assim, formalizamos: <br> <br>
+$\begin{cases} H_0: \text{As variáveis são independentes (não existe associação entre elas)} \\ H_1: \text{As variáveis são dependentes (existe associação entre elas).}\end{cases}$
+
+## *MÉTRICAS DE ASSOCIAÇÃO*
+::: box-blue
+- O Teste qui-quadrado de Pearson é usado para verificar a associação entre as variáveis qualitativas e a satisfação com o serviço online.
+- O Teste Exato de Fisher é alternativa conservadora, para quando o Teste qui-quadrado não é adequado.
+- O coeficiente de Cramer foi utilizado para medir a força da associação entre as variáveis.
+:::
+
+## *SUPOSIÇÕES*
+::: box-blue
+- Em geral, supõe-se que cada da elemento amostra é independente.
+- Assume-se que a amostra é representativa da população.
+- Para o Teste Qui-quadrado, são exigidas frequências esperadas menores que 5.
+- Para o Teste de Fisher, supõe-se que os totais marginais são fixos.
+:::
+
+# *ESTATÍSTICAS DE TESTE*
+
+## **TESTE QUI-QUADRADO DE INDEPENDÊNCIA**
+### Cálculo da estatística
+1. Calcular as frequências esperadas para cada combinação de categorias, sob a hipótese nula de independência. <br>
+2. Calcular a estatística do teste usando a fórmula: <br> $\displaystyle \chi^2 = \sum_{i=1}^n\sum_{j=1}^m \frac{(O_{ij} - E_{ij})^2}{E_{ij}}$, onde O é a frequência observada e E é a frequência esperada.
+
+## **TESTE QUI-QUADRADO DE INDEPENDÊNCIA**
+### Resíduos Padronizados
+- Os resíduos padronizados são dados pela fórmula: <br> $R_{ij} = \frac{O_{ij} - E_{ij}}{\sqrt{E_{ij}}}$ <br>
+- Auxiliam na identificação do sentido da associação entre as categorias, indicando se a frequência observada é maior ou menor do que a esperada.
+
+## **TESTE QUI-QUADRADO DE INDEPENDÊNCIA**
+### Comentários
+* A frequência esperada corresponde ao valor que mantém a proporção entre as categorias, caso as variáveis sejam independentes. <br>
+* A estatística de teste mede a discrepância entre as frequências observadas e esperadas
+* A ponderação pelo valor esperado visa evitar que categorias com maiores frequências tenham um impacto desproporcional no resultado do teste.
+
+## **TESTE EXATO DE FISHER**
+### Estrutura do teste
+* Dado o número de observações em cada categoria, o teste calcula a probabilidade de obter uma distribuição tão extrema quanto a observada, assumindo que as variáveis são independentes. <br>
+* A estatística do teste é uma variável aleatória que segue uma distribuição hipergeométrica de parâmetros $N$, $K$, $n$ e $k$, onde: <br>
+  - $N$: número total de observações
+  - $K$: número de observações na categoria de interesse
+  - $n$: número de observações na categoria de comparação
+  - $k$: número de observações na interseção das categorias
+Fórmula: <br> $p = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}$
+
 # **GTSUMMARY**{data-background-image="Capa.png" style="text-align:center"}
 
-## **TABELA** {.scrollable}
+## **TABELAS DE FREQUÊNCIAS ESPERADAS** {.scrollable} 
+
+- Gênero
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Feminino   |  25 |     22     |   51    |
+| Masculino | 24 |     21      |    49    |
+
+- Cliente
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Cliente Fiel   |  42 |     37     |   85    |
+| Cliente Não Fiel | 7 |     6      |    15    |
+
+- Idade
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| <30 anos   |  14 |     12     |   29    |
+| >50 anos | 13 |     12      |    27    |
+| 30-50 anos | 21 |     19      |    44    |
+
+- Tipo da viagem
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Viagem a negócios   |  33 |     29     |   67    |
+| Viagem pessoal | 16 |     14      |    33    |
+
+- Classe
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Econômica   |  16 |     14     |   33    |
+| Econômica Plus | 6 |     5      |    12    |
+| Executiva | 27 |     23      |    54    |
+
+- Distância
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| <500 km   |  8 |     7     |   18    |
+| 500-1500 km | 21 |     18      |    42    |
+| >1500 km | 19 |     17      |    39    |
+
+- Partida
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Partida com atraso   |  14 |     12     |   28    |
+| Partida sem atraso | 35 |     31      |    72    |
+
+- Chegada 
+
+| Variáveis | Insatisfeito | Neutro | Satisfeito |
+|:--------|:------:|:----------:|:----------:|
+| Chegada com atraso   |  11 |     10     |   23    |
+| Chegada sem atraso | 38 |     33      |    77    |
+
+
+## **TABELA DE ASSOCIAÇÕES OBSERVADAS** {.scrollable}
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
 require(openxlsx)            # Leitura de base de dados
@@ -104,51 +215,32 @@ tbl_summary(data = DadosQuali,
 ```
 
 
-## **RESULTADOS**
 
-::: box-blue
-Este é um bloco azul.
+
+## **RESULTADOS NOTÁVEIS** {.scrollable}
+
+::: box-green
+### Associações significativas
+Variáveis que apresentaram associação significativa com a satisfação do serviço online:
+
+| Variáveis | p-valor | Cramer | Associação |
+|:--------|:------:|:----------:|:----------------: |
+| Tipo de Cliente   |  0,004 |     0,238     | Fidelidade -> Satisfação |
+| Idade | <0,001 |     0,226      | +Idade -> +Satisfação |
+| Classe | <0,001 |     0,271      | +Classe -> +Satisfação |
 :::
 
-| Variáveis | p-valor | Cramer |
-|:--------|:------:|:----------:|
-| Lápis   |  1.50 |     10     |
-| Caderno | 12.00 |     5      |
-| Mochila | 75.00 |     1      |
+<br>
 
-## *SCROLLING*
+::: box-blue
+### Variáveis independentes
+Variáveis que apresentaram menores valores de associação e não apresentaram associação significativa:
 
-Este slide demonstra o uso da classe **scrollable**, que permite adicionar **rolagem vertical** quando o conteúdo é muito grande.
+| Variáveis | p-valor | Cramer | Tipo de associação |
+|:--------|:------:|:----------:|:----------------: |
+| Atraso na Chegada   |  0,071 |     0,071     | Ausente |
+| Gênero | 0,549 |     0,078      | Ausente |
+| Distância | 0,5 |     0,093      | Ausente |
+:::
 
-Este é um exemplo de texto genérico utilizado apenas para preencher o slide e demonstrar como o conteúdo pode ultrapassar a altura da tela.
 
-- Item 1
-- Item 2
-- Item 3
-- Item 4
-- Item 5
-
-Quando há muito conteúdo, o slide normalmente ficaria visualmente sobrecarregado. Com o uso de `scrollable`, é possível manter tudo em um único slide e permitir que o usuário role o conteúdo.
-
-- Item A
-- Item B
-- Item C
-- Item D
-- Item E
-
-## **CRIANDO UMA CHUNK**
-```{r}
-x <- 1:10
-hist(x)
-```
-
-## CHUNK COM NOME
-```{r boxplot}
-x <- 1:10
-boxplot(x)
-```
-
-## **CHUNK PERSONALIZADA**
-```{r, fig.width=10, fig.height=4}
-hist(rnorm(100), col="skyblue", main="Histograma")
-```
