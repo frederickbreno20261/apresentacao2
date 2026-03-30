@@ -134,6 +134,7 @@ Fórmula: <br> $p = \frac{\binom{K}{k} \binom{N-K}{n-k}}{\binom{N}{n}}$
 | Chegada sem atraso | 38 |     33      |    77    |
 
 
+
 ## **TABELA DE ASSOCIAÇÕES OBSERVADAS** {.scrollable}
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE}
